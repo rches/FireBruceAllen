@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from "react";
 
 //timer logic
 class Timer extends React.Component{
@@ -23,7 +23,7 @@ class Timer extends React.Component{
             time: new Date().toLocaleString
         });
     }
-    
+
     render() {
         return(
             <div>{this.state.bruceTimer}</div>
