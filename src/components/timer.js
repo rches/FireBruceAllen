@@ -9,7 +9,7 @@ class Timer extends React.Component{
     constructor(props){
         super(props);
         this.state = {
-            bruceTimer: new moment().toLocaleString()
+            bruceTimer: ''
         };
     }
 
@@ -34,7 +34,7 @@ class Timer extends React.Component{
 
     render() {
         return(
-            <div>{this.state.bruceTimer}</div>
+            <p>Bruce has worked for the Washington Redskins for {this.state.bruceTimer} days.</p>
         );
     }
 }
