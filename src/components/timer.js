@@ -1,13 +1,19 @@
 import React, { Component } from "react";
+var moment = require('moment');
+
+//date Allen started working for Redskins
+const bruceStartDate = new moment("2009-12-17");
 
 //timer logic
 class Timer extends React.Component{
     constructor(props){
         super(props);
         this.state = {
-            bruceTimer: new Date().toLocaleString()
+            bruceTimer: new moment().toLocaleString()
         };
     }
+
+    
 
     componentDidMount() {
         this.intervalID = setInterval(
@@ -19,8 +25,10 @@ class Timer extends React.Component{
     }
 
     tick() {
+        let now = moment();
+        let bruceHasWorkedFor = now.diff(bruceStartDate, 'days');
         this.setState({
-            time: new Date().toLocaleString
+            bruceTimer: bruceHasWorkedFor
         });
     }
 
@@ -29,8 +37,6 @@ class Timer extends React.Component{
             <div>{this.state.bruceTimer}</div>
         );
     }
-
-const bruceStartDate = new Date("2009-12-17");
-let bruceTimer = new Date().toLocaleString();
-
 }
+
+export default Timer
