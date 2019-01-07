@@ -1,6 +1,6 @@
 {
   "name": "TheBruceAllenTimer",
-  "private": true,
+  "private": false,
   "description": "For those curious about Bruce Allen's employment status",
   "version": "0.1.0",
   "author": "Rob Cheseldine",

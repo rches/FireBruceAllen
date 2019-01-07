@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { faDivide } from "@fortawesome/free-solid-svg-icons";
 var moment = require('moment');
 
 //date Allen started working for Redskins
@@ -9,13 +10,20 @@ class Timer extends React.Component{
     constructor(props){
         super(props);
         this.state = {
-            bruceTimer: ''
+            bruceTimer: '',
+            toggleOn: false
+            
         };
+        this.handleClick = this.handleClick.bind(this);
     }
 
-    
+    handleClick() {
+        this.setState(state => ({
+            toggleOn: !state.toggleOn
+        }));
+    }
 
-    componentDidMount() {
+   componentDidMount() {
         this.intervalID = setInterval(
             () => this.tick(), 1000
         );
@@ -34,7 +42,14 @@ class Timer extends React.Component{
 
     render() {
         return(
-            <p>Bruce has worked for the Washington Redskins for {this.state.bruceTimer} days.</p>
+            <div>
+                <button onClick={this.handleClick}>Is Bruce still employeed?</button>
+                <p> 
+                    {this.state.toggleOn ? 
+                    'Bruce has worked for the Washington Redskins for ' + this.state.bruceTimer + ' days. What a bummer!':
+                     'Anything is possible - click to check!'} 
+                </p>
+            </div>
         );
     }
 }
