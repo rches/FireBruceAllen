@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { faDivide } from "@fortawesome/free-solid-svg-icons";
 var moment = require('moment');
 
 //date Allen started working for Redskins
@@ -43,7 +42,7 @@ class Timer extends React.Component{
     render() {
         return(
             <div>
-                <button onClick={this.handleClick}>Is Bruce still employeed?</button>
+                <button onClick={this.handleClick}>Is Bruce still employed?</button>
                 <p> 
                     {this.state.toggleOn ? 
                     'Bruce has worked for the Washington Redskins for ' + this.state.bruceTimer + ' days. What a bummer!':
