@@ -15,3 +15,5 @@ class Social extends React.Component {
         )
     }
 }
+
+export default Social
