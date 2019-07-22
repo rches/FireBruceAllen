@@ -2,11 +2,11 @@ import React from 'react'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import Timer from '../components/timer'
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faTwitter } from '@fortawesome/free-solid-svg-icons'
-import { faRedditAlien } from '@fortawesome/free-solid-svg-icons'
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
+// import { library } from '@fortawesome/fontawesome-svg-core'
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import { faTwitter } from '@fortawesome/free-solid-svg-icons'
+// import { faRedditAlien } from '@fortawesome/free-solid-svg-icons'
+// import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 
 
 
